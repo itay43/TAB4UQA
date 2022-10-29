@@ -32,13 +32,11 @@ public class SearchboxTests {
         driver.get("https://www.tab4u.com//");
         Thread.sleep(2000);
     }
-
     @AfterClass(alwaysRun = true)
     public static void tearDownAfterClass() throws Exception {
         driver.quit();
         extent.flush();
     }
-
     @Test(priority = 1)
     public static void searchBox() throws InterruptedException, AWTException {
         TAB_OBJ_FUNC Search = new TAB_OBJ_FUNC(driver);
@@ -55,16 +53,15 @@ public class SearchboxTests {
         }
         Search.SearchBoxClear();
     }
-
     @Test(priority = 2)
     public static void SrcBoxSuj() throws InterruptedException, AWTException {
         TAB_OBJ_FUNC tablog = new TAB_OBJ_FUNC(driver);
         tablog.SRCCLICK();
         Thread.sleep(1000);
         tablog.SRCSUJCLICK();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         tablog.SearchBtn();
-        Thread.sleep(3000);
+        Thread.sleep(1000);
         String URL = driver.getCurrentUrl();
         test.info("Pick from search box suggestion Test");
         if (Objects.equals(URL, "https://www.tab4u.com/resultsSimple?tab=songs&q=%D7%A9%D7%9C%D7%9E%D7%94+%D7%90%D7%A8%D7%A6%D7%99&content=&max_chords=0")) {
