@@ -150,9 +150,9 @@ public class SearchboxTests {
         } catch (
                 IOException e) {
             test.addScreenCaptureFromPath("C:\\Users\\itay\\Desktop\\TAB4U AUTO PROJ\\REPORTS");
-            Thread.sleep(2000);
         }
     }
+
     @Test(priority = 7)
     public static void SearchLMishtamshim() throws InterruptedException, IOException {
         TAB_OBJ_FUNC SearchMish = new TAB_OBJ_FUNC(driver);
@@ -174,11 +174,10 @@ public class SearchboxTests {
         } catch (
                 IOException e) {
             test.addScreenCaptureFromPath("C:\\Users\\itay\\Desktop\\TAB4U AUTO PROJ\\REPORTS");
-            Thread.sleep(2000);
         }
     }
-}
 
+}
 
 
 

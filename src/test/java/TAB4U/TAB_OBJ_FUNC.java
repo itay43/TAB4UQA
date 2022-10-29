@@ -152,7 +152,6 @@ driver.findElement(lucSelc).click();
     driver.findElement(SrclucotBtn).click();
     Thread.sleep(1000);
 driver.findElement(elcguitar).click();
-    Thread.sleep(1000);
 }
 
     public  void  Mishtamshim () throws InterruptedException{
