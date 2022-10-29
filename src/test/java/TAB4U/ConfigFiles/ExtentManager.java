@@ -1,4 +1,4 @@
-package TAB4U;
+package TAB4U.ConfigFiles;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
@@ -6,7 +6,7 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.Test;
+
 import java.io.File;
 import java.io.IOException;
 import java.text.DateFormat;

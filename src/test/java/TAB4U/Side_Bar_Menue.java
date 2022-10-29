@@ -1,16 +1,14 @@
 package TAB4U;
-import java.awt.*;
+
+import TAB4U.ConfigFiles.ExtentManager;
+import TAB4U.Objfunc.TAB2_OBJ_FUNC;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
-import java.io.File;
-import java.io.IOException;
+
 import java.util.Objects;
 public class Side_Bar_Menue  {
     private static WebDriver driver = null;

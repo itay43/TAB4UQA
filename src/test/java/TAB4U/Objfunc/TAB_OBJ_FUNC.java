@@ -1,4 +1,4 @@
-package TAB4U;
+package TAB4U.Objfunc;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 public  class  TAB_OBJ_FUNC {

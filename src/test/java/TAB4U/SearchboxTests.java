@@ -1,5 +1,8 @@
 package TAB4U;
 import java.awt.*;
+
+import TAB4U.ConfigFiles.ExtentManager;
+import TAB4U.Objfunc.TAB_OBJ_FUNC;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -152,7 +155,6 @@ public class SearchboxTests {
             test.addScreenCaptureFromPath("C:\\Users\\itay\\Desktop\\TAB4U AUTO PROJ\\REPORTS");
         }
     }
-
     @Test(priority = 7)
     public static void SearchLMishtamshim() throws InterruptedException, IOException {
         TAB_OBJ_FUNC SearchMish = new TAB_OBJ_FUNC(driver);
@@ -176,7 +178,6 @@ public class SearchboxTests {
             test.addScreenCaptureFromPath("C:\\Users\\itay\\Desktop\\TAB4U AUTO PROJ\\REPORTS");
         }
     }
-
 }
 
 
