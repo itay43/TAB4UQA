@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-10-20T21:42:54 IDT" name="Default Suite" finished-at="2022-10-20T21:43:08 IDT" duration-ms="14301">
+    <groups>
+    </groups>
+    <test started-at="2022-10-20T21:42:54 IDT" name="TAB4URUN.java" finished-at="2022-10-20T21:43:08 IDT" duration-ms="14301">
+      <class name="TAB4U.TAB4URUN">
+        <test-method is-config="true" signature="setUpBeforeClass()[pri:0, instance:TAB4U.TAB4URUN@1677d1]" started-at="2022-10-20T21:42:54 IDT" name="setUpBeforeClass" finished-at="2022-10-20T21:43:05 IDT" duration-ms="11880" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpBeforeClass -->
+        <test-method signature="logobtn()[pri:0, instance:TAB4U.TAB4URUN@1677d1]" started-at="2022-10-20T21:43:05 IDT" name="logobtn" finished-at="2022-10-20T21:43:07 IDT" duration-ms="2016" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logobtn -->
+        <test-method is-config="true" signature="tearDownAfterClass()[pri:0, instance:TAB4U.TAB4URUN@1677d1]" started-at="2022-10-20T21:43:07 IDT" name="tearDownAfterClass" finished-at="2022-10-20T21:43:08 IDT" duration-ms="380" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownAfterClass -->
+      </class> <!-- TAB4U.TAB4URUN -->
+    </test> <!-- TAB4URUN.java -->
+  </suite> <!-- Default Suite -->
+</testng-results>

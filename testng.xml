@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Tab4uTests">
+    <test verbose="2" preserve-order="true" name="C:/Users/itay/Desktop/TAB4U AUTO PROJ/TAB4UQA">
+        <classes>
+            <class name ="TAB4U.TAB4URUN"> </class>
+            <class name ="TAB4U.SearchboxTests"> </class>
+        </classes>
+    </test>
+</suite>
