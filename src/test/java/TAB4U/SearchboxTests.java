@@ -64,7 +64,7 @@ public class SearchboxTests {
         Thread.sleep(1000);
         String URL = driver.getCurrentUrl();
         test.info("Pick from search box suggestion Test");
-        if (Objects.equals(URL, "https://www.tab4u.com/resultsSimple?tab=songs&q=%D7%A9%D7%9C%D7%9E%D7%94+%D7%90%D7%A8%D7%A6%D7%99&content=&max_chords=0")) {
+        if (Objects.equals(URL, "https://www.tab4u.com/resultsSimple?tab=songs&q=%D7%A2%D7%99%D7%93%D7%9F+%D7%A8%D7%99%D7%99%D7%9B%D7%9C&content=&max_chords=0")) {
             test.pass("pass");
         } else {
             test.fail("fail");
