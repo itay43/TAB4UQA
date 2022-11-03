@@ -6,6 +6,7 @@
             <class name ="TAB4U.TAB4URUN"> </class>
             <class name ="TAB4U.SearchboxTests"> </class>
             <class name ="TAB4U.Side_Bar_Menue"> </class>
+            <class name ="TAB4U.SideBarMenue2"> </class>
         </classes>
     </test>
 </suite>
