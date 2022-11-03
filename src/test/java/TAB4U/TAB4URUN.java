@@ -1,6 +1,5 @@
 package TAB4U;
 import java.awt.*;
-
 import TAB4U.ConfigFiles.ExtentManager;
 import TAB4U.Objfunc.TAB_OBJ_FUNC;
 import com.aventstack.extentreports.ExtentReports;
@@ -9,7 +8,6 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
-
 import java.util.Objects;
 public class TAB4URUN {
     private static WebDriver driver = null;

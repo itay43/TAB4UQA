@@ -64,7 +64,7 @@ public class SearchboxTests {
         Thread.sleep(1000);
         String URL = driver.getCurrentUrl();
         test.info("Pick from search box suggestion Test");
-        if (Objects.equals(URL, "https://www.tab4u.com/resultsSimple?tab=songs&q=%D7%A2%D7%99%D7%93%D7%9F+%D7%A8%D7%99%D7%99%D7%9B%D7%9C&content=&max_chords=0")) {
+        if (Objects.equals(URL, "https://www.tab4u.com/resultsSimple?tab=songs&q=%D7%9E%D7%99%D7%9B%D7%9C&content=&max_chords=0")) {
             test.pass("pass");
         } else {
             test.fail("fail");
@@ -135,8 +135,8 @@ public class SearchboxTests {
         TAB_OBJ_FUNC SearchLuc = new TAB_OBJ_FUNC(driver);
         SearchLuc.SrcLuchot();
         String URL = driver.getCurrentUrl();
-        test.info("Luchot Mechirot Electric Guitar Search Test");
-        if (Objects.equals(URL, "https://www.tab4u.com/boards/sale/?cat=6")) {
+        test.info("Luchot Mechirot  Guitar Search Test");
+        if (Objects.equals(URL, "https://www.tab4u.com/boards/sale/?search&q=%D7%92%D7%99%D7%98%D7%A8%D7%94")) {
             test.pass("pass");
         } else {
             test.fail("fail");
