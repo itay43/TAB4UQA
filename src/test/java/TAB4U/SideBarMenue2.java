@@ -92,6 +92,8 @@ public class SideBarMenue2 {
     public static void BassGuitar() throws InterruptedException, IOException {
         TAB_OBJ_FUNC logo = new TAB_OBJ_FUNC(driver);
         logo.logobtn();
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,600)", "");
         TAB3_OBJ_FUNC bass = new TAB3_OBJ_FUNC(driver);
         bass.Bassguitar();
         test.info("Bass Guitar Test");
@@ -281,9 +283,8 @@ public class SideBarMenue2 {
         FileUtils.copyFile(screenshot, new File("C:\\Users\\itay\\Desktop\\TAB4U AUTO PROJ\\Screenshots\\By Birthday Page Test.png"));
         try {
             FileUtils.copyFile(screenshot, new File("C:\\Users\\itay\\Desktop\\TAB4U AUTO PROJ\\Screenshots\\By Birthday Page Test.png"));
-
-            test.addScreenCaptureFromPath("C:\\Users\\itay\\Desktop\\TAB4U AUTO PROJ\\REPORTS");
-        } catch (
+        }
+        catch (
                 IOException e) {
             test.addScreenCaptureFromPath("C:\\Users\\itay\\Desktop\\TAB4U AUTO PROJ\\REPORTS");
         }
@@ -300,7 +301,6 @@ public  static void RandomSong() throws InterruptedException{
     test.info("Random Song Page Test");
     if (!Objects.equals(url1, url2))
     { test.pass("pass");
-        test.addScreenCaptureFromPath("C:\\Users\\itay\\Desktop\\TAB4U AUTO PROJ\\REPORTS");
     }
     else {test.fail("Fail");
         test.addScreenCaptureFromPath("C:\\Users\\itay\\Desktop\\TAB4U AUTO PROJ\\REPORTS");
@@ -316,7 +316,6 @@ public  static void RandomSong() throws InterruptedException{
     test.info("Song By Category Page Test");
     if (Objects.equals(url, "https://www.tab4u.com/categories.php")) {
         test.pass("Pass");
-        test.addScreenCaptureFromPath("C:\\Users\\itay\\Desktop\\TAB4U AUTO PROJ\\REPORTS");
     }
      else {test.fail("Fail");
         test.addScreenCaptureFromPath("C:\\Users\\itay\\Desktop\\TAB4U AUTO PROJ\\REPORTS");
@@ -332,7 +331,6 @@ public  static void RandomSong() throws InterruptedException{
     String url = driver.getCurrentUrl();
     if (Objects.equals(url,"https://www.tab4u.com/views100")) {
         test.pass("Pass");
-        test.addScreenCaptureFromPath("C:\\Users\\itay\\Desktop\\TAB4U AUTO PROJ\\REPORTS");
     }
     else {
         test.fail("Fail");
@@ -349,7 +347,6 @@ public  static void RandomSong() throws InterruptedException{
         String url = driver.getCurrentUrl();
         if (Objects.equals(url,"https://www.tab4u.com/top100")) {
             test.pass("Pass");
-            test.addScreenCaptureFromPath("C:\\Users\\itay\\Desktop\\TAB4U AUTO PROJ\\REPORTS");
         }
         else {
             test.fail("Fail");
@@ -366,7 +363,6 @@ public  static void RandomSong() throws InterruptedException{
         String url = driver.getCurrentUrl();
         if (Objects.equals(url,"https://www.tab4u.com/last100")) {
             test.pass("Pass");
-            test.addScreenCaptureFromPath("C:\\Users\\itay\\Desktop\\TAB4U AUTO PROJ\\REPORTS");
         }
         else {
             test.fail("Fail");

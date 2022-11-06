@@ -46,7 +46,6 @@ public class SearchboxTests {
         test.info("Search Box Result Test");
         if (Objects.equals(SRS, "משינה")) {
             test.pass("pass");
-            test.addScreenCaptureFromPath("C:\\Users\\itay\\Desktop\\TAB4U AUTO PROJ\\REPORTS");
         } else {
             test.fail("fail");
             test.addScreenCaptureFromPath("C:\\Users\\itay\\Desktop\\TAB4U AUTO PROJ\\REPORTS");
@@ -116,6 +115,7 @@ public class SearchboxTests {
             test.pass("pass");
         } else {
             test.fail("fail");
+            test.addScreenCaptureFromPath("C:\\Users\\itay\\Desktop\\TAB4U AUTO PROJ\\REPORTS");
         }
         Thread.sleep(1000);
         File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
@@ -140,6 +140,7 @@ public class SearchboxTests {
             test.pass("pass");
         } else {
             test.fail("fail");
+            test.addScreenCaptureFromPath("C:\\Users\\itay\\Desktop\\TAB4U AUTO PROJ\\REPORTS");
         }
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,700)", "");
@@ -162,6 +163,7 @@ public class SearchboxTests {
             test.pass("pass");
         } else {
             test.fail("fail");
+            test.addScreenCaptureFromPath("C:\\Users\\itay\\Desktop\\TAB4U AUTO PROJ\\REPORTS");
         }
         Thread.sleep(1000);
         JavascriptExecutor js = (JavascriptExecutor) driver;
