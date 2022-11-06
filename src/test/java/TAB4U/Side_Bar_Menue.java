@@ -2,6 +2,7 @@ package TAB4U;
 import TAB4U.ConfigFiles.ExtentManager;
 import TAB4U.Objfunc.TAB2_OBJ_FUNC;
 import TAB4U.Objfunc.TAB_OBJ_FUNC;
+import atu.testrecorder.ATUTestRecorder;
 import atu.testrecorder.exceptions.ATUTestRecorderException;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -156,13 +157,14 @@ public class Side_Bar_Menue {
     }
     @Test(priority = 8)
     public static void Tuner() throws InterruptedException, IOException, ATUTestRecorderException {
+        ATUTestRecorder recorder = new ATUTestRecorder ("C:\\Users\\itay\\Desktop\\TAB4U AUTO PROJ\\Video Recording","Tuner Video",true);
+        recorder.start();
         TAB_OBJ_FUNC Tune = new TAB_OBJ_FUNC(driver);
         Tune.logobtn();
         Thread.sleep(1000);
         TAB2_OBJ_FUNC tuner = new TAB2_OBJ_FUNC(driver);
         tuner.Tune();
-// add video/audio recorder
-        test.info("Tuner Test");
+        test.info("Tuner Test - video with sound is in the project library");
         String URL = driver.getCurrentUrl();
         if (Objects.equals(URL, "https://www.tab4u.com/tuner")) {
             test.pass("pass");
@@ -170,6 +172,7 @@ public class Side_Bar_Menue {
             test.fail("fail");
             test.addScreenCaptureFromPath("C:\\Users\\itay\\Desktop\\TAB4U AUTO PROJ\\REPORTS");
         }
+        recorder.stop();
     }
     @Test(priority = 9)
     public static void ChordsDictionary() throws InterruptedException, IOException, ATUTestRecorderException {
