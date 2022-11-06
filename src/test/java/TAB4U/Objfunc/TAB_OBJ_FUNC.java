@@ -27,28 +27,21 @@ public  class  TAB_OBJ_FUNC {
     By bass= By.xpath("//*[@id=\"category1\"]/option[3]");
     By town = By.id("user_from");
     By TeachFindBtn = By.xpath("//*[@id=\"teachForm\"]/input[2]");
-By Luch = By.xpath("//*[@id=\"site_search_menu\"]/li[3]/a/span");
-
-By lucSelc = By.id("boardsSelect");
-By Sales = By.xpath("//*[@id=\"boardsSelect\"]/option[2]");
-
-By SrclucotBtn = By.xpath("//*[@id=\"site_search_form_block\"]/div[3]/form/div/input[2]");
-
-By SrcBoxLuchot = By.xpath("//*[@id=\"searchTextB\"]");
-
-By elcguitar = By.xpath("//*[@id=\"page_content\"]/ul[2]/li[3]/a/span");
-By Mish = By.xpath("//*[@id=\"site_search_menu\"]/li[5]/a/span");
-
-By Photo = By.xpath("//*[@id=\"pOnlyArea\"]");
-By gender = By.id("bp3");
-By man = By.xpath("//*[@id=\"bp3\"]/option[2]");
-By agebtn = By.id("bp4");
-By age25 = By.xpath("//*[@id=\"bp4\"]/option[15]");
-
-By ageoldbtn = By.id("bp5");
-By age30 = By.xpath("//*[@id=\"bp5\"]/option[14]");
-
-By mishsrcbtn = By.id("bP1");
+    By Luch = By.xpath("//*[@id=\"site_search_menu\"]/li[3]/a/span");
+    By lucSelc = By.id("boardsSelect");
+    By Sales = By.xpath("//*[@id=\"boardsSelect\"]/option[2]");
+    By SrclucotBtn = By.xpath("//*[@id=\"site_search_form_block\"]/div[3]/form/div/input[2]");
+    By SrcBoxLuchot = By.xpath("//*[@id=\"searchTextB\"]");
+    By elcguitar = By.xpath("//*[@id=\"page_content\"]/ul[2]/li[3]/a/span");
+    By Mish = By.xpath("//*[@id=\"site_search_menu\"]/li[5]/a/span");
+    By Photo = By.xpath("//*[@id=\"pOnlyArea\"]");
+    By gender = By.id("bp3");
+    By man = By.xpath("//*[@id=\"bp3\"]/option[2]");
+    By agebtn = By.id("bp4");
+    By age25 = By.xpath("//*[@id=\"bp4\"]/option[15]");
+    By ageoldbtn = By.id("bp5");
+    By age30 = By.xpath("//*[@id=\"bp5\"]/option[14]");
+    By mishsrcbtn = By.id("bP1");
     public TAB_OBJ_FUNC(WebDriver driver) {
         this.driver = driver;
     }
@@ -123,18 +116,18 @@ public void ENG() throws InterruptedException{
     }
     public void  SrcTeach () throws  InterruptedException{
     driver.findElement(logo).click();
-        Thread.sleep(1000);
+    Thread.sleep(1000);
     driver.findElement(SrcMEN).click();
-        Thread.sleep(3000);
+    Thread.sleep(3000);
     driver.findElement(cateacher).click();
     Thread.sleep(2000);
     driver.findElement(bass).click();
-        Thread.sleep(2000);
-        driver.findElement(town).click();
+    Thread.sleep(2000);
+    driver.findElement(town).click();
     driver.findElement(town).sendKeys("באר שבע");
     Thread.sleep(1000);
-driver.findElement(TeachFindBtn).click();
-        Thread.sleep(3000);
+    driver.findElement(TeachFindBtn).click();
+    Thread.sleep(3000);
     }
 public  void  SrcLuchot () throws InterruptedException{
     driver.findElement(logo).click();
@@ -145,21 +138,15 @@ public  void  SrcLuchot () throws InterruptedException{
     Thread.sleep(1000);
     driver.findElement(SrcBoxLuchot).clear();
     driver.findElement(SrcBoxLuchot).sendKeys("גיטרה");
-driver.findElement(lucSelc).click();
+    driver.findElement(lucSelc).click();
     Thread.sleep(1000);
     driver.findElement(Sales).click();
     Thread.sleep(1000);
     driver.findElement(SrclucotBtn).click();
     Thread.sleep(2000);
-
 }
-
     public  void  Mishtamshim () throws InterruptedException{
-        driver.findElement(signin_btn).click();
-        driver.findElement(mail).sendKeys("30itay@gmail.com");
-        driver.findElement(pass).sendKeys("123456");
-        driver.findElement(btnmailpass).click();
-        driver.findElement(logo).click();
+        LOGIN();
         Thread.sleep(1000);
         driver.findElement(SrcMEN).click();
         Thread.sleep(2000);
@@ -167,21 +154,19 @@ driver.findElement(lucSelc).click();
         Thread.sleep(2000);
         driver.findElement(Photo).click();
         Thread.sleep(2000);
-driver.findElement(gender).click();
+        driver.findElement(gender).click();
         Thread.sleep(1000);
-driver.findElement(man).click();
+        driver.findElement(man).click();
         Thread.sleep(1000);
-driver.findElement(agebtn).click();
+        driver.findElement(agebtn).click();
         Thread.sleep(1000);
-driver.findElement(age25).click();
+        driver.findElement(age25).click();
         Thread.sleep(1000);
-driver.findElement(ageoldbtn).click();
+        driver.findElement(ageoldbtn).click();
         Thread.sleep(1000);
-driver.findElement(age30).click();
+        driver.findElement(age30).click();
         Thread.sleep(1000);
-driver.findElement(mishsrcbtn).click();
+        driver.findElement(mishsrcbtn).click();
         Thread.sleep(3000);
-
     }
-
 }

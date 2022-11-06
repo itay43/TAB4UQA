@@ -5,8 +5,8 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 public class TAB3_OBJ_FUNC {
     WebDriver driver = null;
-    By Coachclick = By.xpath("//*[@id=\"rightPCMenu\"]/div[10]/a");
-  By Guitarless = By.xpath("//*[@id=\"intrumentsMenu\"]/div[1]/a");
+By Coachclick = By.xpath("//*[@id=\"rightPCMenu\"]/div[10]/a");
+By Guitarless = By.xpath("//*[@id=\"intrumentsMenu\"]/div[1]/a");
 By strum = By.xpath("//*[@id=\"intrumentsMenu\"]/div[2]/a");
 By bass = By.xpath("//*[@id=\"intrumentsMenu\"]/div[3]/a");
 By drumsclick = By.xpath("//*[@id=\"intrumentsMenu\"]/div[4]/a");
@@ -23,50 +23,40 @@ By mostnew = By.partialLinkText("שירים חדשים");
     public TAB3_OBJ_FUNC(WebDriver driver) {
         this.driver = driver;
     }
-
     public void CoachPageGuitarLess() throws InterruptedException{
         driver.findElement(Coachclick).click();
         Thread.sleep(2000);
         driver.findElement(Guitarless).click();
     }
-
     public void StrumingPage() throws InterruptedException{
         driver.findElement(Coachclick).click();
         Thread.sleep(2000);
         driver.findElement(strum).click();
     }
-
     public void Bassguitar() throws InterruptedException{
         driver.findElement(Coachclick).click();
         Thread.sleep(2000);
         driver.findElement(bass).click();
     }
-
     public void Drumas() throws InterruptedException{
         driver.findElement(Coachclick).click();
         Thread.sleep(2000);
         driver.findElement(drumsclick).click();
-
     }
-
     public void Trumpetpage() throws InterruptedException{
         driver.findElement(Coachclick).click();
         Thread.sleep(2000);
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,700)", "");
         driver.findElement(trumpet).click();
-
     }
-
     public void Vocalspage() throws InterruptedException{
         driver.findElement(Coachclick).click();
         Thread.sleep(2000);
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,700)", "");
         driver.findElement(vocals).click();
-
     }
-
     public void OtherplayresLastconection() throws InterruptedException{
         driver.findElement(others).click();
         Thread.sleep(1000);
@@ -79,29 +69,24 @@ By mostnew = By.partialLinkText("שירים חדשים");
         driver.findElement(birthday).click();
         Thread.sleep(1000);
     }
-
     public void randomsong ()throws InterruptedException{
         driver.findElement(randomclick).click();
-Thread.sleep(1000);
+    Thread.sleep(1000);
     }
-
     public void songbycategory ()throws InterruptedException{
         driver.findElement(songbycat).click();
         Thread.sleep(1000);
     }
-public void Mostview ()throws InterruptedException{
+    public void Mostview ()throws InterruptedException{
         driver.findElement(mostview).click();
         Thread.sleep(1000);
-}
-public void Mosrated ()throws InterruptedException{
+    }
+    public void Mosrated ()throws InterruptedException{
         driver.findElement(mostrated).click();
         Thread.sleep(1000);
-}
-public void Mostnew () throws InterruptedException{
+    }
+    public void Mostnew () throws InterruptedException{
         driver.findElement(mostnew).click();
         Thread.sleep(1000);
-
-}
-
-
+    }
 }

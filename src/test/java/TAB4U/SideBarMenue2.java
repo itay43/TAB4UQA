@@ -17,14 +17,11 @@ import org.testng.annotations.*;
 import java.io.File;
 import java.io.IOException;
 import java.util.Objects;
-import java.util.Random;
-
 public class SideBarMenue2 {
     private static WebDriver driver = null;
     static ExtentReports extent;
     static ExtentTest test;
     static ExtentManager exm = new ExtentManager(driver);
-
     @BeforeClass(alwaysRun = true)
     public static void setUpBeforeClass() throws Exception {
         WebDriverManager.chromedriver().setup();
@@ -35,13 +32,11 @@ public class SideBarMenue2 {
         driver.get("https://www.tab4u.com//");
         Thread.sleep(2000);
     }
-
     @AfterClass(alwaysRun = true)
     public static void tearDownAfterClass() throws Exception {
         driver.quit();
         extent.flush();
     }
-
     @Test(priority = 1)
     public static void CoachersPageGuitarLesson() throws InterruptedException, IOException {
         //   TAB_OBJ_FUNC logo = new TAB_OBJ_FUNC(driver);
@@ -67,7 +62,6 @@ public class SideBarMenue2 {
             test.addScreenCaptureFromPath("C:\\Users\\itay\\Desktop\\TAB4U AUTO PROJ\\REPORTS");
         }
     }
-
     @Test(priority = 2)
     public static void StrummingPage() throws InterruptedException, IOException {
         TAB_OBJ_FUNC logo = new TAB_OBJ_FUNC(driver);
@@ -94,7 +88,6 @@ public class SideBarMenue2 {
             test.addScreenCaptureFromPath("C:\\Users\\itay\\Desktop\\TAB4U AUTO PROJ\\REPORTS");
         }
     }
-
     @Test(priority = 3)
     public static void BassGuitar() throws InterruptedException, IOException {
         TAB_OBJ_FUNC logo = new TAB_OBJ_FUNC(driver);
@@ -121,11 +114,12 @@ public class SideBarMenue2 {
             test.addScreenCaptureFromPath("C:\\Users\\itay\\Desktop\\TAB4U AUTO PROJ\\REPORTS");
         }
     }
-
     @Test(priority = 4)
     public static void DrumsPage() throws InterruptedException, IOException {
         TAB_OBJ_FUNC logo = new TAB_OBJ_FUNC(driver);
         logo.logobtn();
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,600)", "");
         TAB3_OBJ_FUNC Drums = new TAB3_OBJ_FUNC(driver);
         Drums.Drumas();
         Thread.sleep(2000);
@@ -149,16 +143,16 @@ public class SideBarMenue2 {
             test.addScreenCaptureFromPath("C:\\Users\\itay\\Desktop\\TAB4U AUTO PROJ\\REPORTS");
         }
     }
-
     @Test(priority = 5)
     public static void TrumpetPage() throws InterruptedException, IOException {
         TAB_OBJ_FUNC logo = new TAB_OBJ_FUNC(driver);
         logo.logobtn();
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,600)", "");
         TAB3_OBJ_FUNC Trumpet = new TAB3_OBJ_FUNC(driver);
         Trumpet.Trumpetpage();
         Thread.sleep(2000);
         test.info("Trumpet Page Test");
-        JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,700)", "");
         String URL = driver.getCurrentUrl();
         if (Objects.equals(URL, "https://www.tab4u.com/articles/trumpet")) {
@@ -179,7 +173,6 @@ public class SideBarMenue2 {
             test.addScreenCaptureFromPath("C:\\Users\\itay\\Desktop\\TAB4U AUTO PROJ\\REPORTS");
         }
     }
-
     @Test(priority = 6)
     public static void VocalsPage() throws InterruptedException, IOException {
         TAB_OBJ_FUNC logo = new TAB_OBJ_FUNC(driver);
@@ -209,7 +202,6 @@ public class SideBarMenue2 {
             test.addScreenCaptureFromPath("C:\\Users\\itay\\Desktop\\TAB4U AUTO PROJ\\REPORTS");
         }
     }
-
     @Test(priority = 7)
     public static void OtherPlayrsLastcConection() throws InterruptedException, IOException {
         TAB_OBJ_FUNC logo = new TAB_OBJ_FUNC(driver);
@@ -242,7 +234,6 @@ public class SideBarMenue2 {
             test.addScreenCaptureFromPath("C:\\Users\\itay\\Desktop\\TAB4U AUTO PROJ\\REPORTS");
         }
     }
-
     @Test(priority = 8, dependsOnMethods = "OtherPlayrsLastcConection")
     public static void SignByDatePage() throws InterruptedException, IOException {
         TAB3_OBJ_FUNC Bydate = new TAB3_OBJ_FUNC(driver);
@@ -270,7 +261,6 @@ public class SideBarMenue2 {
             test.addScreenCaptureFromPath("C:\\Users\\itay\\Desktop\\TAB4U AUTO PROJ\\REPORTS");
         }
     }
-
     @Test(priority = 9, dependsOnMethods = "OtherPlayrsLastcConection")
     public static void ByBirthdayPage() throws InterruptedException, IOException {
         TAB3_OBJ_FUNC birth = new TAB3_OBJ_FUNC(driver);
@@ -298,7 +288,6 @@ public class SideBarMenue2 {
             test.addScreenCaptureFromPath("C:\\Users\\itay\\Desktop\\TAB4U AUTO PROJ\\REPORTS");
         }
     }
-
 @Test(priority = 10)
 public  static void RandomSong() throws InterruptedException{
     JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -350,7 +339,6 @@ public  static void RandomSong() throws InterruptedException{
         test.addScreenCaptureFromPath("C:\\Users\\itay\\Desktop\\TAB4U AUTO PROJ\\REPORTS");
     }
 }
-
     @Test(priority = 13)
     public static void MostRated()throws InterruptedException{
         JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -385,7 +373,6 @@ public  static void RandomSong() throws InterruptedException{
             test.addScreenCaptureFromPath("C:\\Users\\itay\\Desktop\\TAB4U AUTO PROJ\\REPORTS");
         }
     }
-
 }
 
 

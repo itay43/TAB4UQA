@@ -37,7 +37,7 @@ public class TAB4URUN {
         tablog.ProfPage();
         Thread.sleep(2000);
         String URL = driver.getCurrentUrl();
-        test.info("LoginTest");
+        test.info("Sign in Test");
         if (Objects.equals(URL, "https://www.tab4u.com/profile.php?id=2534522")) {
             test.pass("pass");
         } else {
@@ -61,11 +61,11 @@ public class TAB4URUN {
         Thread.sleep(1000);
     }
     @Test(priority = 3)
-    public static void LogOut() throws InterruptedException, AWTException {
+    public static void SignOut() throws InterruptedException, AWTException {
         TAB_OBJ_FUNC LogOut = new TAB_OBJ_FUNC(driver);
         LogOut.LOGOUT();
         String URL = driver.getCurrentUrl();
-        test.info("Log Out Test");
+        test.info("Sign Out Test");
         if (Objects.equals(URL, "https://www.tab4u.com/")) {
             test.pass("pass");
         } else {

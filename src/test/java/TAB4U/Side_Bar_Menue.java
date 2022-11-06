@@ -265,11 +265,14 @@ public class Side_Bar_Menue {
         }
         logo.logobtn();
         Thread.sleep(1000);
+        TAB_OBJ_FUNC logout = new TAB_OBJ_FUNC(driver);
+        logout.LOGOUT();
     }
     @Test(priority = 14)
     public static void Mysongs() throws InterruptedException, IOException, ATUTestRecorderException {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,700)", "");
+     TAB_OBJ_FUNC login = new TAB_OBJ_FUNC(driver);
+     login.LOGIN();
+     Thread.sleep(1000);
         TAB2_OBJ_FUNC mysong = new TAB2_OBJ_FUNC(driver);
         mysong.mysongs();
         test.info("My Songs Page Test");

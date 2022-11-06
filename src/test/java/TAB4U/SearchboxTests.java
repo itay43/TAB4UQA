@@ -163,7 +163,7 @@ public class SearchboxTests {
         } else {
             test.fail("fail");
         }
-        Thread.sleep(5000);
+        Thread.sleep(1000);
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,700)", "");
         File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
