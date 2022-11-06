@@ -7,6 +7,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -240,6 +241,8 @@ public class Side_Bar_Menue {
     public static void ChordsVideoTutorialPage() throws InterruptedException, IOException, ATUTestRecorderException {
         TAB_OBJ_FUNC logo = new TAB_OBJ_FUNC(driver);
         logo.logobtn();
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,700)", "");
         TAB2_OBJ_FUNC ChorDir = new TAB2_OBJ_FUNC(driver);
         ChorDir.Chordstutorialpage();
         test.info("Chords Tutorial Page Test");
@@ -265,6 +268,8 @@ public class Side_Bar_Menue {
     }
     @Test(priority = 14)
     public static void Mysongs() throws InterruptedException, IOException, ATUTestRecorderException {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,700)", "");
         TAB2_OBJ_FUNC mysong = new TAB2_OBJ_FUNC(driver);
         mysong.mysongs();
         test.info("My Songs Page Test");

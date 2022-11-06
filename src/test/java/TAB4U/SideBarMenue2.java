@@ -17,6 +17,8 @@ import org.testng.annotations.*;
 import java.io.File;
 import java.io.IOException;
 import java.util.Objects;
+import java.util.Random;
+
 public class SideBarMenue2 {
     private static WebDriver driver = null;
     static ExtentReports extent;
@@ -297,6 +299,92 @@ public class SideBarMenue2 {
         }
     }
 
+@Test(priority = 10)
+public  static void RandomSong() throws InterruptedException{
+    JavascriptExecutor js = (JavascriptExecutor) driver;
+    js.executeScript("window.scrollBy(0,700)", "");
+    TAB3_OBJ_FUNC Random = new TAB3_OBJ_FUNC(driver);
+    Random.randomsong();
+    String url1 = driver.getCurrentUrl();
+    Random.randomsong();
+    String url2 = driver.getCurrentUrl();
+    test.info("Random Song Page Test");
+    if (!Objects.equals(url1, url2))
+    { test.pass("pass");
+        test.addScreenCaptureFromPath("C:\\Users\\itay\\Desktop\\TAB4U AUTO PROJ\\REPORTS");
+    }
+    else {test.fail("Fail");
+        test.addScreenCaptureFromPath("C:\\Users\\itay\\Desktop\\TAB4U AUTO PROJ\\REPORTS");
+    }
+}
+@Test(priority = 11)
+    public static void SongByCategory() throws InterruptedException{
+    JavascriptExecutor js = (JavascriptExecutor) driver;
+    js.executeScript("window.scrollBy(0,1200)", "");
+    TAB3_OBJ_FUNC SongCat = new TAB3_OBJ_FUNC(driver);
+    SongCat.songbycategory();
+    String url = driver.getCurrentUrl();
+    test.info("Song By Category Page Test");
+    if (Objects.equals(url, "https://www.tab4u.com/categories.php")) {
+        test.pass("Pass");
+        test.addScreenCaptureFromPath("C:\\Users\\itay\\Desktop\\TAB4U AUTO PROJ\\REPORTS");
+    }
+     else {test.fail("Fail");
+        test.addScreenCaptureFromPath("C:\\Users\\itay\\Desktop\\TAB4U AUTO PROJ\\REPORTS");
+    }
+}
+@Test(priority = 12)
+    public static void MostView()throws InterruptedException{
+    JavascriptExecutor js = (JavascriptExecutor) driver;
+    js.executeScript("window.scrollBy(0,1200)", "");
+    TAB3_OBJ_FUNC most = new TAB3_OBJ_FUNC(driver);
+    most.Mostview();
+    test.info("Most View Page Test");
+    String url = driver.getCurrentUrl();
+    if (Objects.equals(url,"https://www.tab4u.com/views100")) {
+        test.pass("Pass");
+        test.addScreenCaptureFromPath("C:\\Users\\itay\\Desktop\\TAB4U AUTO PROJ\\REPORTS");
+    }
+    else {
+        test.fail("Fail");
+        test.addScreenCaptureFromPath("C:\\Users\\itay\\Desktop\\TAB4U AUTO PROJ\\REPORTS");
+    }
+}
+
+    @Test(priority = 13)
+    public static void MostRated()throws InterruptedException{
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,1200)", "");
+        TAB3_OBJ_FUNC mostrated = new TAB3_OBJ_FUNC(driver);
+        mostrated.Mosrated();
+        test.info("Most Rated Page Test");
+        String url = driver.getCurrentUrl();
+        if (Objects.equals(url,"https://www.tab4u.com/top100")) {
+            test.pass("Pass");
+            test.addScreenCaptureFromPath("C:\\Users\\itay\\Desktop\\TAB4U AUTO PROJ\\REPORTS");
+        }
+        else {
+            test.fail("Fail");
+            test.addScreenCaptureFromPath("C:\\Users\\itay\\Desktop\\TAB4U AUTO PROJ\\REPORTS");
+        }
+    }
+    @Test(priority = 14)
+    public static void MostNew()throws InterruptedException{
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,1200)", "");
+        TAB3_OBJ_FUNC mostnew = new TAB3_OBJ_FUNC(driver);
+        mostnew.Mostnew();
+        test.info("Most New Page Test");
+        String url = driver.getCurrentUrl();
+        if (Objects.equals(url,"https://www.tab4u.com/last100")) {
+            test.pass("Pass");
+            test.addScreenCaptureFromPath("C:\\Users\\itay\\Desktop\\TAB4U AUTO PROJ\\REPORTS");
+        }
+        else {
+            test.fail("Fail");
+            test.addScreenCaptureFromPath("C:\\Users\\itay\\Desktop\\TAB4U AUTO PROJ\\REPORTS");
+        }
+    }
 
 }
 

@@ -15,6 +15,11 @@ By vocals = By.xpath("//*[@id=\"intrumentsMenu\"]/div[6]/a");
 By others = By.xpath("//*[@id=\"usersRight\"]/a");
 By signdate = By.xpath("//*[@id=\"byArea\"]/a[2]");
 By birthday = By.xpath("//*[@id=\"byArea\"]/a[3]");
+By randomclick = By.xpath("//*[@id=\"randomSong\"]");
+By songbycat = By.xpath("//*[@id=\"sidebar\"]/div[3]/ul[3]/li[11]/a");
+By mostview = By.partialLinkText("הנצפים ביותר");
+By mostrated = By.partialLinkText("המדורגים ביותר");
+By mostnew = By.partialLinkText("שירים חדשים");
     public TAB3_OBJ_FUNC(WebDriver driver) {
         this.driver = driver;
     }
@@ -74,6 +79,29 @@ By birthday = By.xpath("//*[@id=\"byArea\"]/a[3]");
         driver.findElement(birthday).click();
         Thread.sleep(1000);
     }
+
+    public void randomsong ()throws InterruptedException{
+        driver.findElement(randomclick).click();
+Thread.sleep(1000);
+    }
+
+    public void songbycategory ()throws InterruptedException{
+        driver.findElement(songbycat).click();
+        Thread.sleep(1000);
+    }
+public void Mostview ()throws InterruptedException{
+        driver.findElement(mostview).click();
+        Thread.sleep(1000);
+}
+public void Mosrated ()throws InterruptedException{
+        driver.findElement(mostrated).click();
+        Thread.sleep(1000);
+}
+public void Mostnew () throws InterruptedException{
+        driver.findElement(mostnew).click();
+        Thread.sleep(1000);
+
+}
 
 
 }
