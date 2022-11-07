@@ -307,6 +307,8 @@ public class Side_Bar_Menue {
     public static void ChordsBook() throws InterruptedException, IOException, ATUTestRecorderException {
         TAB_OBJ_FUNC logo = new TAB_OBJ_FUNC(driver);
         logo.logobtn();
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,600)", "");
         TAB2_OBJ_FUNC bookchords = new TAB2_OBJ_FUNC(driver);
         bookchords.ChordBookClick();
         Thread.sleep(2000);
