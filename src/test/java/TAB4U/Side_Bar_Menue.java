@@ -309,7 +309,7 @@ public class Side_Bar_Menue {
         logo.logobtn();
         TAB2_OBJ_FUNC bookchords = new TAB2_OBJ_FUNC(driver);
         bookchords.ChordBookClick();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         test.info("Chords Book Test");
         String URL = driver.getCurrentUrl();
         if (Objects.equals(URL, "https://www.tab4u.com/articles/chordsbook")) {
